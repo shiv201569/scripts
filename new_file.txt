@@ -1,0 +1,1339 @@
+1. Install WSL - Follow the document here - https://cloud.pages.domain.co.uk/dsp-engineering/contributing/dev-environment-setup/#wsl2-configuration
+
+
+2. To install AZ modules - Install-Module -Name Az
+
+3. Import Az module - Import-Module Az
+
+4. To connect to a default Azure subscription - Connect-AzAccount (This will open a url in your default web browser in which we need to select our domain email address)
+Output will be like this:
+Account               SubscriptionName TenantId                             Environment
+-------               ---------------- --------                             -----------
+shivamg@domain.com dh-hub-01        457a65b9-e5e8-45e1-83fb-85aa42633e5b AzureCloud
+
+5. To see access to our subscriptions - az login
+
+6. Continuation to command-5, we can output the list of subscriptions in a table - az account list --output table
+Output will be like this:
+
+Name                   CloudName    SubscriptionId                        TenantId                              State    IsDefault
+---------------------  -----------  ------------------------------------  ------------------------------------  -------  -----------
+dh-hub-01              AzureCloud   0fc4a357-0cd0-482d-8ca5-86876ce3b055  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  True
+dh-ppr-01              AzureCloud   2ed83cbb-62ca-4323-b2ce-949d7aaefc79  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-prd-01              AzureCloud   bae1058a-3a49-4d8a-8348-864e7c0563a7  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-dev-01              AzureCloud   319de386-f296-4f2d-818c-01c41f150070  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+AMS-01                 AzureCloud   071af222-ff85-417b-bf8f-60b7d6427337  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+DUB-01                 AzureCloud   7b7a6fad-a2da-4808-af8f-d5fb04842091  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-vdi-infrastructure  AzureCloud   252b12de-ff85-4297-99c4-838ee8677e3a  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+AMS-03                 AzureCloud   75a9d60f-4ef8-4806-8867-10e7772244bd  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-power-bi            AzureCloud   9705a926-d6b7-4717-bc92-5ac1a2a762c4  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+media-pocs             AzureCloud   2c651cec-b34f-41b9-a1c2-40f4a6db77ef  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+DUB-02                 AzureCloud   075d26b1-1646-40bf-b0d3-3c50ff820d77  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+model-lab-prod         AzureCloud   9a6afe60-36a4-4854-a49f-0c6432e353fe  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+AMS-02                 AzureCloud   29696bc7-f239-4445-a33a-99d8d8762e36  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dhAzureDevOps          AzureCloud   f6a8dc34-7d11-403a-9785-f8435c23c748  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+model-lab-preprod      AzureCloud   0112308f-61e5-4703-9d4e-23f530383448  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+model-lab-dev          AzureCloud   0ef784f0-9e57-4574-acf0-b5ce54ec5ef0  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-sbx-01              AzureCloud   69cf3aa7-f245-4af3-a39d-85d7e638ba05  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+dh-networks-poc        AzureCloud   f9c26da6-c33a-4689-8406-680ccb6a1391  457a65b9-e5e8-45e1-83fb-85aa42633e5b  Enabled  False
+
+7. We can get the current default Az-Context - Get-Azcontext
+
+8. Whichever resource we need to access we can do by selecting the subscriptionid from above table , for instance I wanted to access dh-ppr-01 context resource name - Set-Azcontext 2ed83cbb-62ca-4323-b2ce-949d7aaefc79
+
+9. Now I was following the postman documentation to generate a SAS token from here - https://cloud.pages.domain.co.uk/cloud-ops/operational-docs/component-guides/postman/#azure-storage which I can do after following the above steps from scratch using WSL.
+
+**********************************************************************************************************************************************************************************
+srei.investors@axistrustee.in
+
+9999478144 - Mayank
+
+american beauty
+most dangerous game
+
+4523
+
+
+
+8914 - Wifi speed 300 Mbps
+
+
+7064
+
+
+
+media-dev-platform-support
+
+shiv_4500@INGURWSLBL3Y7Y2:~$ MASTER_CUSTOM_DNS="https://coop-no-dsp-base-k8.apollo.domain.cloud"
+shiv_4500@INGURWSLBL3Y7Y2:~$ KUBECONFIG_CLUSTER=gke_dh-coop-no-18599_europe-west1-d_coop-no-dsp-base-cluster
+shiv_4500@INGURWSLBL3Y7Y2:~$ MASTER_CUSTOM_DNS="coop-no-dsp-base-k8.apollo.domain.cloud"
+
+
+[2/23 12:53 PM] Ausaf Ahmed
+Set-AdfsRelyingPartyTrust -TargetName "GCP - apollo (production)" -TokenLifetime 60
+
+
+Y5~X+fl|#0Q~o<Q
+
+
+gsutil mb -b on -l eu -p dh-apollo-data-79755 -c multi_regional gs://apollo-analystplatform-soft-erasure
+
+gsutil lifecycle set lifecycle.json gs://apollo-analystplatform-soft-erasure
+
+
+>>> from google.cloud import storage
+>>> client = storage.Client()
+>>> bucket = client.get_bucket('apollo-analystplatform-analyst-tmp')
+>>> print(bucket.location)
+EU
+
+
+gsutil iam ch serviceAccount:cloudops-dev-an-dp@dh-cloudops-dev-61638.iam.gserviceaccount.com:projects/dh-cloudops-dev-data-61638/roles/dsp_dataproject_bucket_read_write gs://cloudops-dev-analystplatform-soft-erasure
+
+# creating the connection
+connection_string = """postgresql+psycopg2://"""+user+""":"""+password+"""@"""+host+"""/"""+database
+postgres_engine = sa.create_engine(connection_string)
+conn=psycopg2.connect(database=database,user=user,password=password,host=host)
+conn.set_client_encoding('utf-8')
+print(database,user,password,host)
+******************************************************************************************************************************************************************************
+Excitel customer care : 0113344
+ 
+
+
+
+Complaint number for Saral : G9104250149
+
+
+
+yum install -y tree make cronie htop pcp pcp-webapi sysstat pigz
+
+
+Connect to citrix : https://apps.uk.domain.com/Citrix/Internal-Site/auth/login.aspx
+
+Udemy:
+https://ilearndh.udemy.com/
+Username : shivam.agrawal@domain.com
+Password : Jun@2020
+
+Coursera:
+https://www.coursera.org/programs/domain-gcp-program-usqtx
+Username : shivam.agrawal@domain.com
+Password : Jun@2020
+
+
+spark2-submit --master yarn --deploy-mode cluster  --queue root.dm.crv_cn --keytab ~/CRVCNETLP.keytab --conf spark.yarn.appMasterEnv.PYSPARK_DRIVER_PYTHON=/dhcommon/dhpython/python/bin/python2.7 --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=/dhcommon/dhpython/python/bin/python2.7   --conf "spark.yarn.executor.memoryOverhead=5120" --num-executors=5 --executor-memory=15G --driver-memory=10G --py-files hdfs://CRVChina-ns/crv_cn/lib/python/domain-1.0-py2.7.egg,hdfs:/crv_cn/lib/python/crv_cn-1.0-py2.7.egg,hdfs://CRVChina-ns/crv_cn/lib/python/quality-1.0-py2.7.egg --principal CRVCNETLP@domain.CO.UK hdfs:/crv_cn/scripts/publish_qa_datalake.py  --clientname crv_cn -y 2019 -m 02 -d 01
+
+spark-submit --class org.apache.spark.examples.SparkPi \
+    --master yarn \
+    --deploy-mode cluster \
+	--keytab /home/CRVCNANETLP/CRVCNANETLP.keytab \
+    --driver-memory 4g \
+    --executor-memory 2g \
+    --executor-cores 4 \
+    --queue root.an.tesco_ie \
+	--principal CRVCNANETLP@DHCRV.EXT \
+    /opt/cloudera/parcels/CDH/lib/spark/lib/spark-examples.jar \
+    10000
+
+spark-submit --class org.apache.spark.examples.SparkPi \
+    --master yarn \
+    --deploy-mode client \
+    --driver-memory 4g \
+    --executor-memory 2g \
+    --executor-cores 4 \
+    --queue root.backup \
+    /opt/cloudera/parcels/CDH/lib/spark/lib/spark-examples.jar \
+    10
+	
+spark2-submit --class org.apache.spark.examples.SparkPi \
+    --master yarn \
+    --deploy-mode cluster \
+    --driver-memory 4g \
+    --executor-memory 2g \
+    --num-executors 5 \
+    --executor-cores 4 \
+    --queue root.an.tesco_bank \
+    /opt/cloudera/parcels/SPARK2/lib/spark2/examples/jars/spark-examples_2.11-2.4.0.cloudera2.jar \
+    10
+	
+spark2-submit --master yarn --deploy-mode client --queue root.an.tesco_ie --class org.apache.spark.examples.SparkPi /opt/cloudera/parcels/CDH/lib/spark/lib/spark-examples.jar 10
+
+df = sqlContext.read.format("com.databricks.spark.csv").option("header", "true").option("inferschema", "true").option("mode", "PERMISSIVE").load("/home/himanid/CRV_ADM/test.csv")
+
+spark-shell --jars /home/himanid/spark-csv_2.10-1.5.0.jar,/home/himanid/commons-csv-1.4.jar --queue root.dm.tesco_cz
+
+val df = sqlContext.read.format("com.databricks.spark.csv").option("header", "true").option("inferschema", "true").option("mode", "PERMISSIVE").load("test.csv")
+*************************************************************************************************************************************************************
+CRV CDH Cluster build:
+
+For CRV PROD(Currently we have SHA1 on CRV PROD nodes):
+/usr/java/default/bin/keytool -genkeypair -alias $(hostname -f) -keyalg RSA -keystore /opt/cloudera/security/pki/$(hostname -f).jks -keysize 2048 -sigalg SHA1withRSA -dname "CN=$(hostname -f),OU=CoE,O=domain Ltd,L=London,ST=London,C=UK" -ext san=dns:$(hostname -f)
+
+/usr/java/default/bin/keytool -certreq -alias $(hostname -f) -keystore /opt/cloudera/security/pki/$(hostname -f).jks -file /opt/cloudera/security/pki/$(hostname -f).csr -ext san=dns:$(hostname -f)
+***************
+For CRV DEV and all new certificates:
+/usr/java/default/bin/keytool -genkeypair -alias $(hostname -f) -keyalg RSA -keystore /opt/cloudera/security/pki/$(hostname -f).jks -keysize 2048 -sigalg SHA256withRSA -dname "CN=$(hostname -f),OU=CoE,O=domain Ltd,L=London,ST=London,C=UK" -ext san=dns:$(hostname -f)
+
+/usr/java/default/bin/keytool -certreq -alias $(hostname -f) -keystore /opt/cloudera/security/pki/$(hostname -f).jks -file /opt/cloudera/security/pki/$(hostname -f).csr -ext san=dns:$(hostname -f)
+***************
+
+set JAVA_HOME on every server, we need to edit the /etc/profile 
+
+openssl pkcs12 -in mystore.p12 -nocerts -out wso2.key
+openssl rsa -in cn-gd15-svv-068.dhcrv.ext.key -out cn-gd15-svv-068-withoutpass.dhcrv.ext.key -passin pass:brDE7GQg
+openssl rsa -in server.key -check
+
+rsync -avz --progress --delete /nfs/science/crv/ cn-gd15-svv-052:/nfs/science/crv/
+rsync -avz --progress --delete /nfs/science/shared/ cn-gd15-svv-052:/nfs/science/shared/
+
+
+/opt/quest/bin/vastool -u linux_deploysvc -w D9Bwx0W+ join -f -c "ou=UNIX,ou=Servers,ou=dhCRV,dc=dhcrv,dc=ext" dhcrv.ext
+
+/opt/quest/bin/vastool unjoin -n cn-gd15-svv-053 -u linux_deploysvc -w D9Bwx0W+ -f -c "ou=UNIX,ou=Servers,ou=dhCRV,dc=dhcrv,dc=ext" dhcrv.ext
+
+keytool -genkeypair -alias cn-gd15-svv-053.dhcrv.ext -keyalg RSA -keystore /opt/cloudera/security/pki/cn-gd15-svv-053.dhcrv.ext.jks -keysize 2048 -dname "CN=cn-gd15-svv-053.dhcrv.ext,OU=UNIX,OU=Servers,OU=dhCRV,DC=dhcrv,DC=ext"
+
+keytool -certreq -alias cn-gd15-svv-053.dhcrv.ext  -keystore /opt/cloudera/security/pki/cn-gd15-svv-053.dhcrv.ext.jks -file /opt/cloudera/security/pki/cn-gd15-svv-053.dhcrv.ext.csr
+
+keytool -genkeypair -alias cn-gd15-svv-052.dhcrv.ext -keyalg RSA -keystore /opt/cloudera/security/pki/cn-gd15-svv-052.dhcrv.ext.jks -keysize 2048 -dname "CN=cn-gd15-svv-052.dhcrv.ext,OU=UNIX,OU=Servers,OU=dhCRV,DC=dhcrv,DC=ext"
+
+keytool -certreq -alias cn-gd15-svv-052.dhcrv.ext  -keystore /opt/cloudera/security/pki/cn-gd15-svv-052.dhcrv.ext.jks -file /opt/cloudera/security/pki/cn-gd15-svv-052.dhcrv.ext.csr
+
+1.) export JAVA_HOME=/usr/java/jdk1.8.0_151
+
+2.) ./certs-split-der.sh $(hostname -f) $(hostname -f).p7b
+
+3.) openssl x509 -in rootCAChain.crt -out rootca.pem -outform PEM
+
+4.) openssl x509 -in $(hostname -f).crt -out $(hostname -f).pem -outform PEM
+5.) openssl x509 -in /opt/cloudera/security/pki/$(hostname -f).pem -noout -text
+
+6.) sudo cp $JAVA_HOME/jre/lib/security/cacerts $JAVA_HOME/jre/lib/security/jssecacerts
+
+7.) sudo $JAVA_HOME/bin/keytool -importcert -alias rootca -keystore $JAVA_HOME/jre/lib/security/jssecacerts -file /opt/cloudera/security/pki/rootca.pem ----- Password : changeit
+
+8.) sudo cat /opt/cloudera/security/pki/rootca.pem >> /opt/cloudera/security/pki/$(hostname -f).pem
+
+9.) sudo $JAVA_HOME/bin/keytool -importcert -alias $(hostname -f) -file /opt/cloudera/security/pki/$(hostname -f).pem -keystore /opt/cloudera/security/pki/$(hostname -f).jks --- Password : brDE7GQg
+
+10.) sudo ln -s /opt/cloudera/security/pki/$(hostname -f).pem /opt/cloudera/security/pki/agent.pem
+
+11.) sudo ln -s /opt/cloudera/security/pki/$(hostname -f).jks /opt/cloudera/security/pki/server.jks
+
+openssl x509 -inform der -in certbundle.cer -out certbundle.pem
+
+sudo $JAVA_HOME/bin/keytool -importcert -alias cn-gd15-svv-042.dhcrv.ext -file /opt/cloudera/security/pki/cn-gd15-svv-042.dhcrv.ext.pem -keystore /opt/cloudera/security/pki/cn-gd15-svv-042.dhcrv.ext.jks
+
+$JAVA_HOME/bin/keytool -importkeystore -srckeystore /opt/cloudera/security/pki/$(hostname -f).jks \
+-srcstorepass brDE7GQg -srckeypass brDE7GQg -destkeystore /opt/cloudera/security/pki/$(hostname -f).p12 \
+-deststoretype PKCS12 -srcalias $(hostname -f) -deststorepass brDE7GQg -destkeypass brDE7GQg
+
+openssl pkcs12 -in /tmp/cn-gd15-svv-041-keystore.p12 -passin pass:brDE7GQg -nokeys \
+-out /opt/cloudera/security/hue/cn-gd15-svv-041.dhcrv.ext.pem
+
+
+openssl pkcs12 -in /tmp/cn-gd15-svv-041-keystore.p12 -passin pass:brDE7GQg \
+   -nocerts -out /opt/cloudera/security/hue/cn-gd15-svv-041.dhcrv.ext.key -passout pass:brDE7GQg
+
+openssl pkcs12 -in cn-gd15-svv-201.dhcrv.ext.jks -passin pass:  
+   
+
+CRV Docker Login:
+
+[root@cn-gd15-svv-209 ~]#docker login docker-science.artifactory.domain.com
+Username: shivamg@domain.com
+Password: <API key from the artifactory>
+Login Succeeded
+
+[root@cn-gd15-svv-209 ~]#docker login docker-dev.artifactory.domain.com
+Username: shivamg@domain.com
+Password: <API key from the artifactory>
+Login Succeeded
+*************************************************************************************************************************************************************
+Bash commands:
+
+Question :
+I have a command that produce a output like this:
+
+$./command1
+word1 word2 word3
+
+I want to pass this three words as arguments to another command like this:
+
+$ command2 word1 word2 word3
+
+How to pass command1 output as three different arguments $1 $2 $3 to command2 ?
+
+Thanks in advance.
+
+Answer: You can use xargs, with the -t flag xargs will be verbose and prints the commands it executes:
+
+./command1 | xargs -t -n1 command2
+-n1 defines the maximum arguments passed to every call of command2. This will execute:
+
+command2 word1
+command2 word2
+command2 word3
+If you want all as argument of one call of command2 use that:
+
+./command1 | xargs -t command2
+That calls command2 with 3 arguments:
+
+command2 word1 word2 word3
+For eg: hdfs dfs -ls /crv_su/.snapshot | awk '{print $8}' | awk -F/ '{print $NF}' | xargs -t -n1 hdfs dfs -deleteSnapshot /crv_su
+
+To just display the filename use the cut command as follows:
+$ grep -H -R vivek /etc/* | cut -d: -f1
+
+How can I find files and then use xargs to move them?
+ls -lrt | awk '{print $9}' | xargs -I '{}' mv '{}' '{}'.domain.co.uk
+
+Removing last blank line in all the files?
+sed -i '/^$/d' *
+
+
+*************************************************************************************************************************************************************
+Git commands:
+
+1.) git clone <project-name-from-Github> (user's public keys needs to be added to the settings of Github to clone the projects locally)
+2.) git pull (pulls all the changes happened in the Git repo to local repo)
+3.) git checkout -b <branch-name> (to create a new branch for committing the changes)
+4.) git status (to check the status on the corresponding branch)
+5.) git add <modified file names> (to include in what will be committed)
+6.) git checkout -- <file> (to discard changes in working directory)
+7.) git reset HEAD <file> (to revert the changes what have been done using git add)
+8.) git commit -am "Comments for the changes done" (Commits the changes and make it ready to be pushed into the Git repo)
+9.) git push -u origin <branch-name>  (To push the commited changes to the git repo on an unprotected branch)
+10.) Once the push command is run, we need to submit the merge request on the git to merge it with the master branch.
+11.) Once the merge request is approved by Marco, pipeline triggers which rebuilds the image with the new changes and push the new images to artifactory as well.
+12.) Once the image is rebuilt and pushed to artifactory, we can test the changes on a test server (gb-slo-svv-3730) running ansible playbooks.
+
+git add -u :/ -> For staging all the changes (remove or add) together for git v2
+
+git clean -n -> list Remove untracked files
+git clean -f -> Remove untracked files
+
+docker save docker-science.artifactory.domain.com/cdh-pyspark-jupyterhub.stable:latest | gzip -c > image.tar.gz
+docker save -o image.tar.gz docker-science.artifactory.domain.com/cdh-pyspark-jupyterhub.stable:latest
+docker load -i image.tar.gz
+
+Ansible commands:
+
+Server : gb-slo-svv-0881  user : svc_sciops  Location : /nfs/science/sciops/sysops
+1.) ansible-playbook playbooks/pyspark.yml --limit <hostname> --list-task --tags <pyspark,common etc> (To list task)
+2.) ansible-playbook playbooks/pyspark.yml --limit <hostname> --list-host
+3.) ansible-playbook playbooks/pyspark.yml --vault-id /home/svc_sciops/vault.pass --limit gb-slo-svv-3730 --tags pyspark (To run the ansible playbook on the host gb-slo-svv-3730 with only pyspark commands)
+
+[svc_sciops@gb-slo-svv-0881 ~]$ ANSIBLE_CONFIG=/nfs/science/sciops/sysops/ansible.cfg ansible all -i hosts.txt -a "hostname" --vault-id /home/svc_sciops/vault.pass
+[DEPRECATION WARNING]: DEFAULT_SUDO_FLAGS option, In favor of become which is a generic framework . This feature will be removed in version 2.8. Deprecation warnings
+deprecation_warnings=False in ansible.cfg.
+gb-slo-svv-3730 | SUCCESS | rc=0 >>
+gb-slo-svv-3730.domain.co.uk
+
+gb-slo-svv-3900 | SUCCESS | rc=0 >>
+gb-slo-svv-3900.domain.co.uk
+
+[svc_sciops@gb-slo-svv-0881 ~]$ ANSIBLE_CONFIG=/nfs/science/sciops/sysops/ansible.cfg ansible gb-slo-svv-3730 -i hosts.txt -a "hostname" --vault-id /home/svc_sciops/
+[DEPRECATION WARNING]: DEFAULT_SUDO_FLAGS option, In favor of become which is a generic framework . This feature will be removed in version 2.8. Deprecation warnings
+deprecation_warnings=False in ansible.cfg.
+gb-slo-svv-3730 | SUCCESS | rc=0 >>
+gb-slo-svv-3730.domain.co.uk
+
+[svc_sciops@gb-slo-svv-0881 ~]$ ANSIBLE_CONFIG=/nfs/science/sciops/sysops/ansible.cfg ansible gb-slo-svv-3730 -i hosts.txt -a "uptime" --vault-id /home/svc_sciops/va
+[DEPRECATION WARNING]: DEFAULT_SUDO_FLAGS option, In favor of become which is a generic framework . This feature will be removed in version 2.8. Deprecation warnings
+deprecation_warnings=False in ansible.cfg.
+gb-slo-svv-3730 | SUCCESS | rc=0 >>
+ 09:38:30 up 13 days,  1:52,  1 user,  load average: 0.09, 0.08, 0.10
+
+
+Pre-requisites before running the ansible playbook:
+
+1.) We need to run git pull inside /nfs/science/sciops/sysops to make sure that changes are in sync with the Git repo)
+2.) We need to check if the server gb-slo-svv-3730 is commented out or not in /nfs/science/sciops/sysops/inventory/function/pyspark.
+3.) We need to check from which server and edge node we are replicating/cloning the things from. Location to check is /nfs/science/sciops/sysops/inventory/host_vars/gb-slo-svv-3730/pyspark.yml
+*************************************************************************************************************************************************************
+Docker stuff:
+
+Proxies for the container:
+
+export ftp_proxy="http://ukproxy1:8080"
+export http_proxy="http://ukproxy1:8080"
+export https_proxy="https://ukproxy1:8080"
+export no_proxy="10.128.17.122,localhost,127.0.0.1/8,local,.domain.co.uk,10.0.0.0/8,10.96.17.122"
+
+New proxies for the container:
+
+UK:
+export ftp_proxy="http://165.225.80.41:80"
+export http_proxy="http://165.225.80.41:80"
+export https_proxy="http://165.225.80.41:80"
+export no_proxy="localhost,.domain.co.uk,.domain.com,.kssretail.local,.googleapis.com,10.0.0.0/8"
+export REQUESTS_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.trust.crt
+
+US:
+export ftp_proxy="http://165.225.34.34:80"
+export http_proxy="http://165.225.34.34:80"
+export https_proxy="http://165.225.34.34:80"
+export no_proxy="localhost,.domain.co.uk,.domain.com,.kssretail.local,.googleapis.com,10.0.0.0/8"
+export REQUESTS_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.trust.crt
+
+Commands to spin up a centos image container:
+docker run -td \
+    --name="centos2" \
+    -v /etc/nsswitch.conf:/etc/nsswitch.conf:ro \
+    -v /etc/pam.d:/etc/pam.d:ro \
+    -v /opt/quest:/opt/quest:ro \
+    -v /var/opt/quest:/var/opt/quest \
+    -v /etc/opt/quest:/etc/opt/quest:ro \
+    -v /usr/lib64/security:/usr/lib64/security:ro \
+    -v /usr/lib64/libnss_vas4.so.2:/usr/lib64/libnss_vas4.so.2:ro \
+    -v /usr/lib/libnss_vas4.so.2:/usr/lib/libnss_vas4.so.2:ro \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /home:/home \
+    -v /nfs:/nfs:shared \
+    -v /etc/pki/tls:/etc/pki/tls \
+    docker-science.artifactory.domain.com/centos.edge:latest
+	
+
+tar -cv * | docker exec -i bb5d0872f509 /bin/tar -C /tmp -x
+
+*************************************************************************************************************************************************************
+Debug R issues using R core dump file:
+
+1. Install gdb - Command - yum install gdb
+2. Try run - gdb /usr/lib64/R/bin/exec/R /path-for-core-dump file (core.27808)
+3. If required install debuginfo-install R-core-3.6.0-1.el7.x86_64
+4. It will tell exactly where the problem is.
+5. Then try to investigate on that.
+*************************************************************************************************************************************************************
+VAS commands:
+
+/opt/quest/bin/vastool -u Linux_DeploySVC -w LXDepScript1! join -f -c "ou=Linux,ou=Servers,ou=UK,dc=domain,dc=co,dc=uk" domain.co.uk
+/opt/quest/bin/vastool -u Linux_DeploySVC -w LXDepScript1! join -f -c "OU=GlobalScience,OU=Linux,OU=Servers,OU=UK,DC=domain,DC=co,DC=uk" domain.co.uk
+
+/opt/quest/bin/vastool flush-----For the VAS service (similar as sssd)
+*************************************************************************************************************************************************************
+These needs to be added to /etc/profile for getting new java version for all the users.
+export JAVA_HOME="/usr/java/default"
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PYSPARK_PYTHON=/dhcommon/dhpython/python/bin/python2.7
+export PYSPARK_DRIVER_PYTHON=/dhcommon/dhpython/dhpython-2.7.10/bin/jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+*************************************************************************************************************************************************************
+Command for getting the trustsore password: curl -k -L -X GET -u admin:met@11ic@ https://gbslobd1r01s03:7183/api/v11/cm/config > /tmp/config_tmp.json
+
+*************************************************************************************************************************************************************
+Sentry Access and Privileges:
+
+Administrative Privilege
+Once the sentryAdmin group is part of Sentry Admin list, it will be able to create policies in Sentry but sentryAdmin will not be allowed to read/write any tables. To do that, privileges must be granted to the sentryAdmin group.
+
+CREATE ROLE admin_role GRANT ALL ON SERVER server1 TO ROLE admin_role; GRANT ROLE admin_role TO GROUP sentryAdmin;
+
+Mysql query:
+SELECT SENTRY_ROLE.ROLE_NAME,SENTRY_GROUP.GROUP_NAME FROM SENTRY_ROLE_GROUP_MAP JOIN SENTRY_ROLE ON SENTRY_ROLE.ROLE_ID=SENTRY_ROLE_GROUP_MAP.ROLE_ID JOIN SENTRY_GROUP ON SENTRY_GROUP.GROUP_ID=SENTRY_ROLE_GROUP_MAP.GROUP_ID;
+
+Postgresql query:
+SELECT "SENTRY_ROLE"."ROLE_NAME","SENTRY_GROUP"."GROUP_NAME"
+FROM "SENTRY_ROLE_GROUP_MAP"
+JOIN "SENTRY_ROLE" ON "SENTRY_ROLE"."ROLE_ID"="SENTRY_ROLE_GROUP_MAP"."ROLE_ID"
+JOIN "SENTRY_GROUP" ON "SENTRY_GROUP"."GROUP_ID"="SENTRY_ROLE_GROUP_MAP"."GROUP_ID";
+*************************************************************************************************************************************************************
+
+There are 2 types of external storage used for local data storage:
+
+1.) Isilon: 
+
+2.) ZFS: head 1 : https://us-lou-zfs-05h1-vip:215/#shares/shares, head 2 : https://us-lou-zfs-05h2-vip:215/#shares/shares
+Username: root, password: s1mpl1fy
+
+One view US creds:
+
+link: https://10.144.19.20/
+Username - Administrator
+Password - domain
+HPE support US number : 90018006333600 
+
+US ILO servers creds:
+
+Username : Administrator
+Password : Fru1tbat
+
+*************************************************************************************************************************************************************
+To connect to Docker on any science server:
+
+1.) Login to the science server from Putty using self credentials.
+2.) Post this, run sudo su - to get to root.
+3.) Type docker images and docker ps commands to know about current images and containers running on the server.
+4.) Then enter this command, docker exec -it <name> bash to enter into container.
+5.) You can issue docker command now to verify if you are into the container or not. This command shouldn't work if you are in container already.
+6.) Then you can check why the user is not able to open sc od SparkContext.
+
+*************************************************************************************************************************************************************
+Knowledge Materials:
+
+There are 3 types of servers in domain:
+
+1.) Oracle BDA
+To login to the servers when they are shutdown:
+https://server-name-ilom/
+From console also they can be restarted by going to the down node using ilom and then type sysreboot (its recommended to use console for doing a reboot)
+ilo can be accessed from terminal using ssh: ssh server-ilom
+ilo creds:
+Username - root
+Password - welcome1
+
+2.) HP physical machines ( servers with svb (where b stands for blade servers), mostly the edge nodes)
+
+3.) Our domain servers (virtual machines) (servers with svv (where v stands for virtual), mostly edge nodes 
+
+dmidecode -> command to get every detail about that server including the manufacturer name.
+
+*************************************************************************************************************************************************************
+
+New client setup ( datalake)
+
+Shared location in on Isilon ( gb-doc-nsc-0002 )
+Creds : username : root, password : Th!nkp@d
+
+cd cd datalake
+
+isi quota quotas create --type=directory --path=/ifs/UKWatfordBDA/datalake/crv_hk --hard-threshold=50G --soft-threshold=40G --soft-grace=7D --container=yes
+isi quota quotas delete --type=directory --path=/ifs/UKWatfordBDA/datalake/unilever_id
+
+isi quota quotas modify --type=directory --path=/ifs/science --hard-threshold=3.12T --soft-threshold=2.92 T --soft-grace=7D --container=yes
+isi quota quotas modify --type=directory --path=/ifs/UKWatfordBDA/datalake/coop_dk/datalake --hard-threshold=750G --soft-threshold=700G --soft-grace=7D --container=yes
+isi quota quotas list
+
+*************************************************************************************************************************************************************
+yum -v list package_name --show-duplicates
+
+cat /etc/auto.remote
+
+/dhcommon/dhpython/python/bin/pip2.7 list | grep -i influx
+/dhcommon/dhpython/python/bin/pip2.7 list | grep pandas
+/dhcommon/dhpython/python/bin/pip2.7 freeze | grep pandas
+/dhcommon/dhpython/python/bin/pip2.7 --proxy usproxy1:8080 search influx
+/dhcommon/dhpython/python/bin/pip2.7 --proxy usproxy1:8080 install influxdb
+
+/dhcommon/dhpython/python/bin/pip2.7 --proxy usproxy1:8080 install pandas==0.22.0
+
+/dhcommon/dhpython/python/bin/pip2.7 --proxy usproxy1:8080 install pandas --upgrade
+
+*************************************************************************************************************************************************************
+Whenever navigator space is filled on Louisiville server 03:
+
+du -sch *
+du -ah / | grep -v "/$" | sort -rh | head -20
+[root@usloubd5r01s03 process]# service cloudera-scm-agent clean_restart
+This command will shut down the Agent, as well as abruptly stopping all running processes that the Agent is currently managing. 
+If you are sure you want to do this, please use the 'clean_restart_confirmed' command.
+*************************************************************************************************************************************************************
+In case of a manual download from the archive:
+
+export http_proxy=http://ukproxy1.domain.co.uk:8080
+wget http://archive.cloudera.com/spark2/parcels/2.2.0.cloudera1/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354-el6.parcel
+
+sha1sum SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354-el6.parcel | awk '{ print $1 }' > SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354-el6.parcel.sha
+*************************************************************************************************************************************************************
+For uploading the attachments on a oracle ticket:
+
+curl -T  /tmp/fsck_report.txt -o output.txt -x ukproxy1:8080 -u shivam.agrawal@domain.com "https://transport.oracle.com/upload/issue/3-16020147091/"
+curl -T  /tmp/fsck_includesnapshots_report.txt -o output.txt -x ukproxy1:8080 -u shivam.agrawal@domain.com "https://transport.oracle.com/upload/issue/3-16020147091/"
+curl -T  /tmp/bdadiagcluster_1520229625.zip -o output.txt -x ukproxy1:8080 -u shivam.agrawal@domain.com "https://transport.oracle.com/upload/issue/3-16965561231/"
+*************************************************************************************************************************************************************
+Oozie commands when TLS and SSL is set up:
+
+export OOZIE_CLIENT_OPTS="-Djavax.net.ssl.trustStore=/opt/cloudera/security/jks/UKSlough01.truststore" 
+export OOZIE_DEBUG=1 
+oozie job -oozie https://gbslobd1r01s04.domain.co.uk:11443/oozie  -kill 0000000-170715064742645-oozie-oozi-C
+oozie admin -oozie https://gbslobd1r01s04.domain.co.uk:11443/oozie/ -configuration > oozie_config.txt 
+*************************************************************************************************************************************************************
+Some useful commands:
+
+ldapsearch -LLL -H ldaps://gb-slo-svv-1100.domain.co.uk:636 -b 'OU=Cloudera-Hadoop,OU=Administrative,OU=Users,OU=Enterprise,DC=domain,DC=co,DC=uk' -x -D 'svc_clouderahadoop@domain.CO.UK' -w 'Rr4cpASV2ynh3B544ZFd'. 
+
+ldapsearch -LLL -H ldaps://cn-gd15-svv-001.dhcrv.ext:636 -b 'OU=Cloudera-Hadoop,OU=Administrative,OU=Users,OU=Enterprise,DC=dhcrv,DC=ext' -x -D 'svc_clouderahadoop@DHCRV.EXT' -w 'P3oUx9w"'
+
+ldapsearch -LLL -H ldaps://cn-gd15-svv-001.dhcrv.ext:636 -b 'OU=Cloudera-Hadoop-Dev,OU=Administrative,OU=Users,OU=Enterprise,DC=dhcrv,DC=ext' -x -D 'svc_cdh_hadoop_dev@DHCRV.EXT' -w 'g8O:vxdkag'
+
+hdfs dfs -ls /user/spark/applicationHistory/ | grep inprogress | grep 2017 | awk '{print $5,$6,$8}' | sort -k 2 >> To produce a result whose state is in progress and of 2017 year sorted by 2nd field, sample output below:
+Output below:
+42833 2017-01-01 /user/spark/applicationHistory/application_1481892423647_2815.inprogress
+306823464 2017-01-03 /user/spark/applicationHistory/application_1481892423647_3084.inprogress
+
+[root@gb-slo-svb-0019 java]# for host in {gb-slo-svb-0018.domain.co.uk,gb-slo-svb-0019.domain.co.uk,gb-slo-svb-0020.domain.co.uk,gb-slo-svr-0025.domain.co.uk,gb-slo-svr-0026.domain.co.uk,gb-slo-svr-0027.domain.co.uk,gb-slo-svr-0028.domain.co.uk,gb-slo-svr-0029.domain.co.uk}; do scp /usr/java/jdk-8u131-linux-x64.tar.gz $host:/usr/java/; done;
+
+for host in {us-lou-svb-2010.domain.co.uk,us-lou-svb-2036.domain.co.uk,us-lou-svb-2056.domain.co.uk,us-lou-svr-2002.domain.co.uk,us-lou-svr-2003.domain.co.uk,us-lou-svr-2004.domain.co.uk,us-lou-svr-2005.domain.co.uk,us-lou-svr-2006.domain.co.uk}; do ssh -t $host cat /etc/auto.remote; done;
+
+for hosts in $(cat /root/gi-hadoop-scripts/fullhostlist.txt); do ssh -t $hosts ls -lh /opt/cloudera; done;
+
+hadoop distcp -Dmapreduce.job.queuename=root.backup -pbr -update -skipcrccheck /icefoods_uk /icefoods_uk_encrypt/
+
+http://us-lou-svb-2010:7180/api/v10/clusters/USLouisvilleDEV/services/sentry/config/
+http://gb-slo-svb-0019:7180/api/v10/clusters/UKSloughDEV/services/hue/config/
+
+yarn logs -applicationId application_1507292454270_2853 -appOwner <application-owner>
+
+keytool -importkeystore -srcstorepass source_truststore_password -srckeystore source_truststore_path -deststorepass dest_truststore_password -destkeystore dest_truststore_path
+
+klist -kt $keytab | grep "$1/" | head -1| awk '{print $4}'
+
+https://gb-slo-svv-6501.domain.co.uk/vsphere-client/
+https://cobbler/cobbler_web
+
+beeline -u 'jdbc:hive2://gbwatbd2r02s02.domain.co.uk:10000/default;principal=hive/_HOST@domain.CO.UK;auth=kerberos'
+
+lsof -nP | grep '(deleted)'
+
+lsb_release -a
+
+hadoop key create $KEY_NAME -size 256
+hdfs crypto -createZone -keyName $KEY_NAME -path /path
+
+To comment dhcommon entries all at once on BDA's:
+dcli -C "sed -e '/dhcommon/ s/^#*/#/' -i /etc/auto.remote" - To be executed on all the BDA's
+
+To comment UKWatfordBDA entries all at once on BDA's:
+dcli -C "sed -e '/UKWatfordBDA/ s/^#*/#/' -i /etc/auto.remote" - To be executed on all the BDA's
+
+Making an entry in auto.remote
+echo "UKWatfordBDA -rw,norootsquash,soft,intr,rsize=262144,wsize=262144 gb-wat-qum0001:/UKWatfordBDA" >> /etc/auto.remote
+
+[root@dhbcmsvpca03 tmp]# hostnamectl
+[root@dhbcmsvpca03 tmp]# rpm --query centos-release
+
+klist -kt $keytab | grep "$1/" | head -1| awk '{print $4}'
+
+lsof -nP | grep '(deleted)'
+
+nohup python myCode.py > myCode.out 2> myCode.err &
+
+To find out the ownership of hdfs root : hdfs dfs -stat "%u %g" /
+for finding the permissions on root, we can check the extended privileges (getfacl, setfacl)
+
+hadoop key create kERjPC88 -size 256
+
+Command for transferring the data without changing the root password for the target server:
+rsync -zavpo --rsync-path="sudo rsync" <source-file/folder> shivamg@<target-server>:/<target-location/.
+
+Remove older kernels from /boot:
+package-cleanup --oldkernels --count=1
+
+**********************************************************************************************************************************
+MySQL commands:
+
+SHOW STATUS WHERE `variable_name` = 'Threads_connected';
+
+show variables like "max_connections";
+set global max_connections = 300;
+
+show processlist;
+
+hadoop distcp -Dmapred.job.queue.name=root.sse -prba webhdfs://gbwatbd1r01s01.domain.co.uk:50070/tesco_gb/Lev3/sse/allocation/promo webhdfs://gbwatbd2r01s01.domain.co.uk:50070/tesco_uk/Lev3/sse/allocation
+
+CREATE EXTERNAL TABLE IF NOT EXISTS test_madhavik (eid int, name String, salary String, destination String)
+ROW FORMAT DELIMITED
+STORED AS TEXTFILE
+LOCATION 'hdfs://UKWatford2-ns/tesco_cz/data/unrestricted/analyst/test_madhavik';
+TBLPROPERTIES("auto.purge"="true");
+LOCATION 'hdfs://gb-slo-svb-0018.domain.co.uk:8020/training_pyspark/analysis/test_shivamg_orig'
+TBLPROPERTIES("auto.purge"="true");
+
+alter table <db-name>.<table-name> SET TBLPROPERTIES("auto.purge"="true");
+
+http://archive.cloudera.com/gplextras6/6.0.1/parcels/
+
+http://us-lou-svb-2010:7180/api/v14/clusters/USLouisvilleDEV/services/hue/config
+
+*************************************************************************************************************************************************************
+Miscellaneus details:
+
+Medical portal
+https://portal.myvantageconnect.co.in/#/Home
+Username : DISI201569
+Password : #MERAbaba1
+
+domain Allsec payroll : https://www.allsechro.com/Smartpay/UserAccount/Login.aspx
+
+Company code : DUN
+Username - 201569
+Password - October@2022
+************************************************************************************************************************************************************************************
+1.> Look for Docker Swarm
+
+SR848408222
+
+84392454
+
+Papa EPFO -> UAN -  Password - SHIVbaba@12
+
+Holiday Calendar - https://domain.service-now.com/dhhr?id=kb_article_view&sysparm_article=KB12689
+
+DC30xrmt^mJ(j
+
+003101011716
+
+Office Days - Mar 2023
+
+6-3-2023 - via Delhi
+
+
+7015476157
+
+INC1260559 - Import Error while connecting SQLAl2chemy from python3
+
+Test VM - gb-wat-svv-1312
+
+7035449777
+*******************************************************************************************************************************************************************
+hadoop distcp -Ddfs.namenode.kerberos.principal.pattern=* -Dmapreduce.job.hdfs-servers.token-renewal.exclude=cn-gd15-svv-200.dhcrv.ext,cn-gd15-svv-201.dhcrv.ext -Dmapreduce.job.queuename=root.backup -prbugpx -update -skipcrccheck hdfs://cn-gd15-svv-201.dhcrv.ext:8020/crv_cn/inbound/product_east_h /user/shivamg/ -- with hive user
+
+
+ANSIBLE_CONFIG=/nfs/science/sciops/sysops/ansible.cfg ansible all --inventory-file=/home/svc_sciops/hosts_test.txt -a "locate /etc/kubelet.d/*yml " --vault-id /home/svc_sciops/vault.pass
+ 
+ 
+ 
+00 22 * * FRI /home/svc_sciops/move_test.sh 2>&1 | tee /home/svc_sciops/move_output.txt | mail -r svc_sciops@domain.co.uk -s "MOVE ALERT : Yml moved in /etc/kubelet.d/stop/ on target servers" ScienceEnvironmentsSupportSquad@domain.com
+
+for i in $(seq -f "%02g" 40 49); do \
+ssh -q cn-gd15-svv-0${i}.dhcrv.ext  <<'EOF'
+
+EOF
+done
+
+ANSIBLE_CONFIG=/nfs/science/sciops/sysops/ansible.cfg ansible-playbook /nfs/science/sciops/sysops/playbooks/science-edge.yml --vault-id /home/svc_sciops/vault.pass --tags science --limit us*
+*******************************************************************************************************************************************************************
+
+docker run -d --rm \
+  --name=rstudio-server.test \
+  -p 8787:8787 \
+  -v /etc/nsswitch.conf:/etc/nsswitch.conf:ro \
+  -v /etc/pam.d:/etc/pam.d:ro \
+  -v /opt/quest:/opt/quest:ro \
+  -v /var/opt/quest:/var/opt/quest \
+  -v /etc/opt/quest:/etc/opt/quest:ro \
+  -v /usr/lib64/security:/usr/lib64/security:ro \
+  -v /usr/lib64/libnss_vas4.so.2:/usr/lib64/libnss_vas4.so.2:ro \
+  -v /usr/lib/libnss_vas4.so.2:/usr/lib/libnss_vas4.so.2:ro \
+  -v /etc/localtime:/etc/localtime:ro \
+  -v /home:/home:ro \
+  -v /nfs:/nfs:shared \
+  -v /etc/pki/tls:/etc/pki/tls \
+  docker-science.artifactory.domain.com/rstudio-server.edge:376262
+
+******************************************************************************************************
+
+/bin/pip3 install -i https://cs-anonymous:Welcome123@artifactory.domain.com/artifactory/api/pypi/pypi-virtual-all/simple easy_features
+
+Questions to be asked:
+
+1. How will the data get balanced if a new JBOD disk is added to a node?
+2. How can we use dynamic allocation in spark and what are its benefits?
+3. What are the disadvantages of using external shuffle service when dymanic allocation is disabled?
+4. lets say I have a 3-rack cluster and all my jobs tend to go to rack-3 nodes, however I have data on rack-2 and rack-2 nodes also, my cluster remains unbalanced, any reasons why?
+5. How can I connect to hive from somewhere outside the cluster?
+6. How does zookeeper functions and what does a zookeeper node be rich in, RAM CPU or IO?
+7. How can we do hive server 2 load balancing?
+8. How can we supress the alerts from CM during upgrades or restart of services?
+9. How can we tackle small files issue in HDFS?
+10. How can you write a script which removes the files from HDFS older than 30 days?
+
+Docker question : how can we install custom yum packages in a container and then use it to create an image and then use it for further purposes?
+
+https://www.dezyre.com/hadoop-tutorial/zookeeper-tutorial
+https://www.edureka.co/blog/interview-questions/docker-interview-questions/
+
+
+for i in $(seq -f "%02g" 40 49); do \
+ssh -q CN-GD15-SVV-0${i}.dhcrv.ext  <<'EOF'
+keytool -importkeystore -srckeystore /opt/cloudera/security/csr_new/cn-gd15-svv-0${i}.dhcrv.ext.jks -destkeystore /opt/cloudera/security/csr_new/cn-gd15-svv-0${i}.dhcrv.ext.jks -deststoretype pkcs12
+EOF
+done
+
+******************************************************************************************************************************
+9599058346 - Shakeel Kabari
+
+docker run -d --name=telegraf \
+--net=container:influxdb \
+-v /monitoring/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+telegraf
+
+find /nfs/science/shared/ -type d -mtime +365 -exec ls -ld {} \;
+find /nfs/science/shared/ -type d -mtime +365 -exec ls -ld {} \; | grep 2020
+
+dcli -C 'echo -e "\n#Service now discovery for BDA nodes.\nsvc_servicenow ALL=(root) /sbin/dmidecode \nsvc_servicenow ALL=(root) /sbin/lsof" >> /etc/sudoers'
+dcli -C 'echo -e "AllowUsers root oracle svc_servicenow" >> /etc/ssh/sshd_config'
+
+435G    /nfs/science/students
+370G    /nfs/science/tesco_uk
+278G    /nfs/science/shared
+269G    /nfs/science/globalscience
+29G     /nfs/science/computer-science
+9.1G    /nfs/science/fastcrunch
+1.5G    /nfs/science/monoprix
+1.3G    /nfs/science/www_users
+530M    /nfs/science/ti_malaysia
+409M    /nfs/science/www_vampiriser
+240M    /nfs/science/sciops
+231M    /nfs/science/www_public
+53M     /nfs/science/airflow
+896K    /nfs/science/spark_training
+744K    /nfs/science/ti_thailand
+144K    /nfs/science/vampiriser
+124K    /nfs/science/crontab
+44K     /nfs/science/psuncert
+28K     /nfs/science/cron
+
+****************************************************************************************************************************
+IDFC Details
+UserID - 519987498
+Password - #BRAHMAbaba1
+
+for manifest in {tesco-uk-test_airflow_pod_mainfest.yml,tesco-th-test_airflow_pod_mainfest.yml,tesco-sk-test_airflow_pod_mainfest.yml,tesco-ie-test_airflow_pod_mainfest.yml,tesco-hu-test_airflow_pod_mainfest.yml,tesco-cz-test_airflow_pod_mainfest.yml,tesco-bank-test_airflow_pod_mainfest.yml,sej-test_airflow_pod_mainfest.yml}; do sed -i '/value: localhost/a\        - name: LD_LIBRARY_PATH\n          value: "/usr/local/airflow/oraclient"\n        - name: http_proxy\n          value: "http://165.225.80.41:80"\n        - name: https_proxy\n          value: "http://165.225.80.41:80"\n        - name: no_proxy\n          value: "localhost,.domain.co.uk,.domain.com,.kssretail.local,.googleapis.com,10.0.0.0/8"\n        - name: SERVICENOW_USER\n          value: "deng_snow"\n        - name: SERVICENOW_PWD\n          value: "dhIndia2021"' $manifest; done
+
+
+******************************************************************************************************************************
+nohup spark2-submit \
+    --master yarn \
+    --queue root.an.tesco_ie \
+    --deploy-mode cluster \
+    --principal $USER@domain.CO.UK \
+    --keytab ~/$USER.keytab \
+    --driver-memory=2G \
+    --conf spark.dynamicAllocation.maxExecutors=5 \
+    --executor-memory=2G \
+    --conf spark.executor.cores=2 \
+    --conf spark.driver.memoryOverhead=1000 \
+    test1.py > test-logs.out 2> test-cluster-logs.error &
+
+
+>>> import requests
+>>> from requests_kerberos import HTTPKerberosAuth, REQUIRED
+>>> kerberos_auth = HTTPKerberosAuth(principal="user@REALM")
+>>> r = requests.get("http://example.org", auth=kerberos_auth)
+
+
+>>> import requests
+>>> from requests_kerberos import HTTPKerberosAuth, REQUIRED
+>>> kerberos_auth = HTTPKerberosAuth(mutual_authentication=REQUIRED, sanitize_mutual_error_response=False)
+>>> r = requests.get("https://windows.example.org/wsman", auth=kerberos_auth)
+
+
+from hdfs.ext.kerberos import KerberosClient
+import requests
+from requests_kerberos import HTTPKerberosAuth, REQUIRED
+kerberos_auth = HTTPKerberosAuth(principal="shivamg@domain.CO.UK")
+#session = requests.Session()
+#session = requests.get("https://gbwatbd2r01s01.domain.co.uk:50470", auth=kerberos_auth)
+#session.verify = False
+client = KerberosClient('https://gbwatbd2r01s01.domain.co.uk:50470', session = session, auth=kerberos_auth)
+
+client.list('/user/shivamg')
+
+********************************************************************************************************
+
+/root/gi-hadoop-scripts/setup_hadoop_datalake_v4.sh --unix-root-dir "xin_cn" --hdfs-root-dir "xin_cn" --client-short-name "xin_cn" --dm-group "UNIX_XINCN_DM" --an-group "UNIX_XINCN_AN" --os-group "UNIX_XINCN_OS_DM" --super-group "UNIX_XINCN_SUPER" --hive-server "cn-gd15-svv-042.dhcrv.ext" --hdfs-name-service "CRVChina-ns"
+
+/root/gi-hadoop-scripts/setup_hadoop_datalake_v3.sh --unix-root-dir "crv_hk" --hdfs-root-dir "crv_hk" --client-short-name "crv_hk" --dm-group "UNIX_CRVHK_DM" --an-group "UNIX_CRVHK_AN" --os-group "UNIX_CRVHK_OS_DM" --super-group "UNIX_CRVHK_SUPER" --hive-server "gbwatbd2r02s02" --hdfs-name-service "UKWatford2-ns"
+
+alias beehive='beeline -u '\''jdbc:hive2://cn-gd15-svv-042.dhcrv.ext:10000/default;ssl=true;principal=hive/cn-gd15-svv-042.dhcrv.ext@DHCRV.EXT'\'''
+
+for host in {10.40.4.40,10.40.4.41,10.40.4.42,10.40.4.43,10.40.4.44,10.40.4.45,10.40.4.46,10.40.4.47,10.40.4.48,10.40.4.49,10.40.4.50,10.40.4.51,10.40.4.52}; do ssh -t $host 'rm -rf /usr/java/jdk-8u131-linux-x64.tar.gz'; done;
+
+
+/root/gi-hadoop-scripts/setup_hadoop_datalake_tesco_new.sh --unix-root-dir "tesco_uk" --hdfs-root-dir "tesco_uk" --client-short-name "tesco_uk" --app-name "data" --dm-group "UNIX_TESCOUK_DM" --an-group "UNIX_TESCOUK_AN" --rs-group "UNIX_TESCOUK_RS_DM" --super-group "UNIX_MOSOQ_SUPER" --hive-server "gb-slo-svb-0019.domain.co.uk" --hdfs-name-service "gb-slo-svb-0018.domain.co.uk:8020"
+
+
+
+
+/root/gi-hadoop-scripts/setup_hadoop_datalake_v4.sh --unix-root-dir "xin_cn" --hdfs-root-dir "xin_cn" --client-short-name "xin_cn" --dm-group "UNIX_XINCN_DEV_DM" --an-group "UNIX_XINCN_DEV_AN" --os-group "UNIX_XINCN_DEV_OS_DM" --super-group "UNIX_DATALAKE_SUPER" --hive-server "cn-gd15-svv-201.dhcrv.ext" --hdfs-name-service "CRVChinaDev-ns"
+
+****************************************************
+
+[root@cn-gd15-svv-042 ~]# showmount -e 10.40.4.53
+Export list for 10.40.4.53:
+/dhcommon_test 10.40.4.42
+[root@cn-gd15-svv-042 ~]# mount -t nfs /dhcommon_test /home/shivamg/
+mount.nfs: remote share not in 'host:dir' format
+[root@cn-gd15-svv-042 ~]# mount -t nfs 10.40.4.53:/dhcommon_test /home/shivamg/
+[root@cn-gd15-svv-042 ~]# cd /home/shivamg/
+[root@cn-gd15-svv-042 shivamg]# ll
+total 0
+[root@cn-gd15-svv-042 shivamg]# cd /dhcommon_test
+-bash: cd: /dhcommon_test: No such file or directory
+[root@cn-gd15-svv-042 shivamg]#
+[root@cn-gd15-svv-042 shivamg]# cd dhcommon_test
+-bash: cd: dhcommon_test: No such file or directory
+[root@cn-gd15-svv-042 shivamg]#
+[root@cn-gd15-svv-042 shivamg]# service nfs status
+Redirecting to /bin/systemctl status  nfs.service
+● nfs-server.service - NFS server and services
+   Loaded: loaded (/usr/lib/systemd/system/nfs-server.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+[root@cn-gd15-svv-042 shivamg]# service nfs start
+Redirecting to /bin/systemctl start  nfs.service
+[root@cn-gd15-svv-042 shivamg]#
+[root@cn-gd15-svv-042 shivamg]#
+[root@cn-gd15-svv-042 shivamg]#
+[root@cn-gd15-svv-042 shivamg]# mount -t nfs 10.40.4.53:/dhcommon_test /home/shivamg/
+mount.nfs: /home/shivamg is busy or already mounted
+[root@cn-gd15-svv-042 shivamg]# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=65915484k,nr_inodes=16478871,mode=755)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,seclabel,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+/dev/mapper/vg_root-root on / type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=31,pgrp=1,timeout=300,minproto=5,maxproto=5,direct)
+mqueue on /dev/mqueue type mqueue (rw,relatime,seclabel)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel)
+sunrpc on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw,relatime)
+nfsd on /proc/fs/nfsd type nfsd (rw,relatime)
+/dev/sda1 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=13186212k,mode=700)
+tmpfs on /run/user/42 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=13186212k,mode=700,uid=42,gid=42)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+gvfsd-fuse on /run/user/42/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=42,group_id=42)
+cm_processes on /run/cloudera-scm-agent/process type tmpfs (rw,relatime,seclabel,mode=751)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+tmpfs on /run/user/988 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=13186212k,mode=700,uid=988,gid=983)
+10.40.4.53:/dhcommon_test on /home/shivamg type nfs4 (rw,relatime,vers=4.0,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,port=0,timeo=600,retrans=2,sec=sys,clientaddr=10.40.4.42,local_lock=none,addr=10.40.4.53)
+[root@cn-gd15-svv-042 shivamg]# df -h
+Filesystem                 Size  Used Avail Use% Mounted on
+/dev/mapper/vg_root-root    70G   44G   27G  63% /
+devtmpfs                    63G  4.0K   63G   1% /dev
+tmpfs                       63G   84K   63G   1% /dev/shm
+tmpfs                       63G  170M   63G   1% /run
+tmpfs                       63G     0   63G   0% /sys/fs/cgroup
+/dev/sda1                 1014M  172M  843M  17% /boot
+tmpfs                       13G     0   13G   0% /run/user/0
+tmpfs                       13G   16K   13G   1% /run/user/42
+cm_processes                63G  152M   63G   1% /run/cloudera-scm-agent/process
+tmpfs                       13G     0   13G   0% /run/user/988
+10.40.4.53:/dhcommon_test   50G   21G   30G  42% /home/shivamg
+[root@cn-gd15-svv-042 shivamg]# ll
+total 0
+-rw-r--r--. 1 root root 0 Sep 20 20:25 test
+[root@cn-gd15-svv-042 shivamg]# unmount /home/shivamg
+bash: unmount: command not found...
+[root@cn-gd15-svv-042 shivamg]# umount /home/shivamg
+umount.nfs4: /home/shivamg: device is busy
+[root@cn-gd15-svv-042 shivamg]# cd
+[root@cn-gd15-svv-042 ~]# umount /home/shivamg
+[root@cn-gd15-svv-042 ~]# df h
+df: ‘h’: No such file or directory
+[root@cn-gd15-svv-042 ~]# df -h
+Filesystem                Size  Used Avail Use% Mounted on
+/dev/mapper/vg_root-root   70G   44G   27G  63% /
+devtmpfs                   63G  4.0K   63G   1% /dev
+tmpfs                      63G   84K   63G   1% /dev/shm
+tmpfs                      63G  170M   63G   1% /run
+tmpfs                      63G     0   63G   0% /sys/fs/cgroup
+/dev/sda1                1014M  172M  843M  17% /boot
+tmpfs                      13G     0   13G   0% /run/user/0
+tmpfs                      13G   16K   13G   1% /run/user/42
+cm_processes               63G  152M   63G   1% /run/cloudera-scm-agent/process
+tmpfs                      13G     0   13G   0% /run/user/988
+
+****************************************************************
+[root@cn-gd15-svv-053 ~]# service nfs status
+Redirecting to /bin/systemctl status  nfs.service
+● nfs-server.service - NFS server and services
+   Loaded: loaded (/usr/lib/systemd/system/nfs-server.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+[root@cn-gd15-svv-053 ~]# vim /etc/exports
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]# mkdir -p /dhcommon_test
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]# vim /etc/exports
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]#
+[root@cn-gd15-svv-053 ~]# service nfs start
+Redirecting to /bin/systemctl start  nfs.service
+[root@cn-gd15-svv-053 ~]# vim /etc/exports
+[root@cn-gd15-svv-053 ~]# service nfs restart
+Redirecting to /bin/systemctl restart  nfs.service
+[root@cn-gd15-svv-053 ~]# cd /dhcommon_test/
+[root@cn-gd15-svv-053 dhcommon_test]# ll
+total 0
+[root@cn-gd15-svv-053 dhcommon_test]# touch test
+[root@cn-gd15-svv-053 dhcommon_test]# cat /etc/exports
+/dhcommon_test 10.40.4.42(ro,insecure,all_squash,crossmnt)
+**********************************************************************
+#
+# /etc/fstab
+# Created by anaconda on Wed Jul  4 16:36:38 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/vg_root-root /                       xfs     defaults        0 0
+UUID=7b5e7563-88d5-43dc-9c8f-c3e41bcff969 /boot                   xfs     defaults        0 0
+/dev/mapper/vg_root-swap swap                    swap    defaults        0 0
+
+LABEL=/home              /home            ext3    defaults   0 0
+LABEL=/CRVChina          /CRVChina        ext3    defaults   0 0
+LABEL=/nfs/science        /nfs/science        ext3    defaults   0 0
+LABEL=/crv_resource      /crv_resource    ext3    defaults   0 0
+
+
+
+/dev/vg_root/lv_root    /dhcommonext3    defaults        1 1
+cn-gd15-svv-042.dhcrv.ext:/dhcommon	/dhcommon	nfs4	defaults	0	0
+
+dhcommon -ro,norootsquash,soft,intr,rsize=8192,wsize=8192 cn-gd15-svv-042.dhcrv.ext:/dhcommon
+
+
+cn-gd15-svv-202.dhcrv.ext:/dhcommon /dhcommon nfs4 defaults 0 0
+*****************************************************************************
+$JAVA_HOME/bin/keytool -genkeypair -alias $host -keyalg RSA -keystore /opt/cloudera/security/csr/$host.jks -keysize 2048 -sigalg SHA256withRSA -dname "CN=$host,OU=CoE,O=domain Ltd,L=London,ST=London,C=GB" -ext san=dns:$host
+
+
+$JAVA_HOME/bin/keytool -certreq -alias cn-gd15-svv-042.dhcrv.ext -keystore /opt/cloudera/security/csr/cn-gd15-svv-042.dhcrv.ext.jks -file /opt/cloudera/security/csr/cn-gd15-svv-042.dhcrv.ext.csr -ext san=dns:cn-gd15-svv-042.dhcrv.ext
+
+
+
+for host in $(cat /root/fullhostlist.txt); do ssh $host '/usr/java/default/bin/keytool -genkeypair -alias $host -keyalg RSA -keystore /opt/cloudera/security/pki/$host.jks -keysize 2048 -sigalg SHA256withRSA -dname "CN=$host,OU=CoE,O=domain Ltd,L=London,ST=London,C=UK" -ext san=dns:$host'; done;
+
+/usr/java/default/bin/keytool -genkeypair -alias $(hostname -f) -keyalg RSA -keystore /opt/cloudera/security/pki/$(hostname -f).jks -keysize 2048 -sigalg SHA256withRSA -dname "CN=$(hostname -f),OU=CoE,O=domain Ltd,L=London,ST=London,C=UK" -ext san=dns:$(hostname -f)
+
+/usr/java/default/bin/keytool -certreq -alias $(hostname -f) -keystore /opt/cloudera/security/pki/$(hostname -f).jks -file /opt/cloudera/security/pki/$(hostname -f).csr -ext san=dns:$(hostname -f)
+
+A59sGuaf
+
+for host in $(cat /root/gi-hadoop-scripts/fullhostlist.txt); do ssh -t $host '/usr/java/default/bin/keytool -certreq -alias $host -keystore /opt/cloudera/security/csr/$host.jks -file /opt/cloudera/security/pki/$host.csr -ext san=dns:$host'; done;
+
+
+
+for host in $(cat /root/gi-hadoop-scripts/fullhostlist.txt); do ssh -t $host 'rm -rf /opt/cloudera/security/csr/*'; done;
+
+for host in $(cat /root/gi-hadoop-scripts/fullhostlist.txt); do scp $host:/opt/cloudera/security/csr/*.csr /opt/cloudera/security/csr/; done;
+
+**************************************************************************************************************
+
+spark2-submit --master yarn                          --deploy-mode cluster                           --keytab ~/SUGCNETLP.keytab --executor-memory 8G --queue root.dm.crv_su --conf spark.yarn.appMasterEnv.PYSPARK_DRIVER_PYTHON=/dhcommon/dhpython/python/bin/python2.7 --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=/dhcommon/dhpython/python/bin/python2.7 --conf spark.executor.heartbeatInterval=100 --conf yarn.resourcemanager.am.max-attempts=1 --conf spark.yarn.executor.memoryOverhead=1000 --conf spark.yarn.maxAppAttempts=1 --conf spark.network.timeout=10000 --conf spark.executor.cores=2 --conf spark.dynamicAllocation.enabled=False --conf spark.dynamicAllocation.executorIdleTimeout=180 --num-executors=30 --driver-memory 8G --conf spark.ui.view.acls=* --py-files  hdfs://CRVChina-ns/crv_su/lib/python/domain-1.0-py2.7.egg,hdfs://CRVChina-ns/crv_su/lib/python/crv_su-1.0-py2.7.egg --principal SUGCNETLP@DHCRV.EXT                          hdfs:/crv_su/scripts//publish_mapped_transactions.py     --partition "year="${array[0]}"/month="${array[1]}"/day="${array[2]}""  --clientname crv_su --entity baskets
+
+--conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=/dhcommon/dhhadoop/python3-science/bin/python3.6
+
+pyspark --master yarn --deploy-mode client --queue root.sse --num-executors 2 --executor-memory 4GB --executor-cores 4 --jars 'spark-csv_2.10-1.4.0.jar,commons-csv-1.4.jar' --principal $USER@domain.CO.UK --keytab ~/$USER.keytab'
+
+pyspark2 --master yarn --deploy-mode client --queue root.dm.tesco_uk --principal $USER@domain.CO.UK --keytab ~/$USER.keytab --conf spark.dynamicAllocation.maxExecutors=40 --executor-memory 10G --conf spark.dynamicAllocation.executorIdleTimeout=300 --conf spark.yarn.executor.memoryOverhead=5120 --conf spark.shuffle.service.enabled=true --conf "spark.kryoserializer.buffer.max=1g" --conf spark.port.maxRetries=32 --jars '/home/polavarb/csv_parser/commons-csv-1.4.jar,/home/polavarb/csv_parser/spark-csv_2.10-1.5.0.jar'
+
+
+# User specific aliases and functions
+
+export PYSPARK_PYTHON=/dhcommon/dhpython/python/bin/python2.7
+export PYSPARK_DRIVER_PYTHON=/dhcommon/dhpython/dhpython-2.7.10/bin/jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PACKAGES="com.databricks:spark-csv_2.11:1.4.0"
+alias notebook='pyspark --master yarn --deploy-mode client --queue root.sse --num-executors 2 --executor-memory 4GB --executor-cores 4 --jars 'spark-csv_2.10-1.4.0.jar,commons-csv-1.4.jar' --principal $USER@domain.CO.UK --keytab ~/$USER.keytab'
+
+jupyter notebook --certfile=/opt/cloudera/security/pki/cn-gd15-svv-053.dhcrv.ext.pem --keyfile /opt/cloudera/security/pki/cn-gd15-svv-053.dhcrv.ext.key
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/cloudera/security/pki/cn-gd15-svv-207.dhcrv.ext.jks -destkeystore /opt/cloudera/security/pki/cn-gd15-svv-207.dhcrv.ext.jks -deststoretype pkcs12".
+
+openssl pkcs12 -in file_name.p12 -nocerts -out private.key
+
+- name: copy auths to root docker directory
+  command: cp /root/.docker/config.json /.docker/config.json
+  become: True
+
+******************************************************************************************************
+for i in $(seq -f "%02g" 43 49); do \
+ssh -q cn-gd15-svv-0${i}.dhcrv.ext  <<'EOF'
+cd /var/run/cloudera-scm-agent/process;
+keytab=`find /var/run/cloudera-scm-agent -name hdfs.keytab | grep DATANODE | head -1`;
+kinit -k -t $keytab -p hdfs/$(hostname -f)@DHCRV.EXT;
+hdfs diskbalancer -plan $(hostname -f);
+plan_path=$(hdfs diskbalancer -plan $(hostname -f) 2>&1 | grep 'Writing plan to' | cut -d":" -f5);
+plan_file=$(hdfs dfs -ls $plan_path | grep plan | awk '{print $8}');
+hdfs diskbalancer -execute $plan_file;
+hdfs diskbalancer -query $(hostname -f);
+EOF
+done
+
+
+for i in $(seq -f "%02g" 01 18); do \
+ssh -q gbwatbd2r03s${i}.dhcrv.ext  <<'EOF'
+keytab=`find /var/run/cloudera-scm-agent -name hdfs.keytab | grep DATANODE | head -1`;
+kinit -k -t $keytab hdfs/$(hostname -f)@DHCRV.EXT;
+hdfs diskbalancer -query $(hostname -f);
+EOF
+done
+
+for host in  $(cat /root/hostlist.txt); do \
+ssh -t -q $host  <<'EOF'
+echo -e "This is for $(hostname -f)\n";
+echo -e "Contents of auto.remote with only Watford Qumulo entries\n";
+cat /etc/auto.remote | grep -i gb-wat-qum0001;
+echo -e "\n***********************************************************************************"
+EOF
+done > output_Wat2nodes_prod.txt
+
+
+
+
+CRV-DEV - Node 206 exports entry:
+/nfs/science       cn-gd15-svv-209.dhcrv.ext(rw,insecure,no_root_squash,crossmnt)
+
+*******************************************************************************************************************************************
+For CDH-5.15.1 find below:
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm5/redhat/7/x86_64/cm/5.15.1/
+rpm --import https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm5/redhat/7/x86_64/cm/RPM-GPG-KEY-cloudera
+
+Use custom-url in Add host wizard after CDH upgrade to 6.2.1 ---
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm6/6.2.1.1426065/
+
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm5/redhat/7/x86_64/cm/cloudera-manager.repo
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm5/redhat/7/x86_64/cm/5.15.1/
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm6
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm6/6.2.1.4505/redhat7/yum/
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm6/6.2.1
+https://4bbb9f21-e850-4956-a77f-a0788942bbbc:dbb0dde8cd94@archive.cloudera.com/p/cm6/6.2.1.4505/redhat7/yum
+
+******************************************************************************************************************************************
+grubby --set-default /boot/vmlinuz-4.1.12-124.29.3.el7uek.x86_64
+grubby --default-kernel
+Reboot the system
+# uname -r
+
+******************************************************************************************************************************************
+
+
+dr/copyfile.sh ["-delete","-skipTrash","-bandwidth","100","-m","50","-pbugpxa","-skipAclErr","-skipcrccheck","-skiplistingcrccheck","-update","-proxyuser","BDR_SUPERUSER","-sourceproxyuser","BDR_SUPERUSER","-log","/user/PROXY_USER_PLACEHOLDER/.cm/distcp/2022-02-01_35618","-sequenceFilePath","/user/PROXY_USER_PLACEHOLDER/.cm/distcp-staging/2022-02-01-11-54-20-82be009a/fileList.seq","-diffRenameDeletePath","/user/PROXY_USER_PLACEHOLDER/.cm/distcp-staging/2022-02-01-11-54-20-82be009a/renamesDeletesList.seq","-sourceconf","source-client-conf","-sourceprincipal","hdfs/gbwatbd2r01s01.domain.co.uk@domain.CO.UK","-sourcetktcache","source.tgt","-copyListingOnSource","-useSnapshots","distcp-113-689573752","-ignoreSnapshotFailures","-diff","-useDistCpFileStatus","-replaceNameservice","-strategy","dynamic","-filters","exclusion-filter.list","-scheduleId","113","-scheduleName","Tesco-bank-Analyst","/user/BDR_SUPERUSER/.cm/distcp-staging/2022-02-01-11-54-20-82be009a","/user/BDR_SUPERUSER/.cm/distcp-staging/2022-02-01-11-54-20-82be009a"
+
+
+
+hadoop --config /etc/distcpConf distcp -Dmapreduce.job.hdfs-servers.token-renewal.exclude=UKWatford2-ns -Dmapreduce.job.queuename=root.backup -Ddfs.replication=1 -pbugpxa -update -skipcrccheck -m 100 -bandwidth 100 -delete hdfs://UKWatford2-ns/tmp/test-bdr /tmp/test-bdr
+
+
+
+“To do prevent putting Qualys commands in root's history file, add the following to the bottom of the root user's .bash_profile:
+
+# Added to stop Qualys filling up history
+loginUser=`logname`
+if [ ${loginUser} == qualys ]; then
+export HISTFILE=~/.qualys_history
+fi
+
+Or
+
+If qualys scan history is not required then :
+
+HISTIGNORE=*QUALYS*:*ORIG_PATH*:echo\ *TEST*
+****************************************************************************************************************************************
+
+In order to clean-up old data from /boot folder on science servers:- 
+package-cleanup --oldkernels --count=1
+
+************************************************************************************************************************************************************************************
+docker run -d --name=telegraf \
+--net=container:influxdb \
+-v /monitoring/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+telegraf
+
+*********************************
+
+root@75322cef3d0a:/# influx -execute 'SELECT COUNT(*) FROM http_response' -database="telegraf"
+name: http_response
+time count_content_length count_http_response_code count_response_time count_result_code count_result_type
+---- -------------------- ------------------------ ------------------- ----------------- -----------------
+0    2635                 2635                     2635                2635              2635
+root@75322cef3d0a:/# influx -execute 'DROP MEASUREMENT http_response' -database="telegraf"
+root@75322cef3d0a:/# influx -execute 'SELECT COUNT(*) FROM http_response' -database="telegraf"
+name: http_response
+time count_content_length count_http_response_code count_response_time count_result_code count_result_type
+---- -------------------- ------------------------ ------------------- ----------------- -----------------
+0    17                   17                       17                  17                17
+root@75322cef3d0a:/# influx -execute 'SELECT COUNT(*) FROM http_response' -database="telegraf"
+name: http_response
+time count_content_length count_http_response_code count_response_time count_result_code count_result_type
+---- -------------------- ------------------------ ------------------- ----------------- -----------------
+0    17                   17                       17                  17                17
+root@75322cef3d0a:/# influx -execute 'SELECT * FROM http_response' -database="telegraf"
+name: http_response
+time                content_length host         http_response_code method response_time result  result_code result_type server                                                             status_code
+----                -------------- ----         ------------------ ------ ------------- ------  ----------- ----------- ------                                                             -----------
+1629275090000000000 6579           75322cef3d0a 200                GET    0.039814906   success 0           success     https://gb-doc-svb-0248.domain.co.uk/edge/py3spark/hub/login    200
+1629275090000000000 6603           75322cef3d0a 200                GET    0.038702912   success 0           success     https://gb-doc-svb-0278.domain.co.uk/stable/python3/hub/login   200
+
+
+root@75322cef3d0a:/# influx -execute 'SELECT COUNT(*) FROM http_response' -database="telegraf"
+name: http_response
+time count_content_length count_http_response_code count_response_time count_result_code count_result_type
+---- -------------------- ------------------------ ------------------- ----------------- -----------------
+0    34                   34                       34                  34                34
+
+
+influx -execute 'SELECT * FROM http_response where server like '%gb-slo-svv-3900%'' -database="telegraf"
+
+*********************************************************************************************************************************************************************************
+Personal access token (gitlab-gcp) - iM5_j9E1Prk8PHxay7yu
+
+export ARTIFACTORY_USER=shivamg@domain.com
+export ARTIFACTORY_KEY=AKCp5btVicFkfimWj3tTwaA7oQ2Qm6MBWi1c8JmrDsvBFAtT7gyUP5JRw38ZCyPmqdeBaXb8K
+export VAULT_PASS=SonRkxhK
+
+export dome9_api_key=c56c97d1-c6cb-43d1-8b9f-d2631c184aaf
+export dome9_api_secret=5u3nn54x5s1s7wct389ks18f
+
+Service Catalog > Get Access > Other Access > Request GCP Access
+
+gcloud services --project $GCP_PROJECT enable cloudfunctions.googleapis.com
+gcloud services --project $GCP_PROJECT enable cloudbuild.googleapis.com
+gcloud services --project $GCP_PROJECT enable pubsub.googleapis.com
+gcloud services --project $GCP_PROJECT enable secretmanager.googleapis.com
+gcloud services --project $GCP_PROJECT enable cloudscheduler.googleapis.com
+
+gcloud projects add-iam-policy-binding $GCP_PROJECT \
+--member "serviceAccount:service-$(gcloud projects list --filter PROJECT_ID=$GCP_PROJECT --format='value(PROJECT_NUMBER)')@gcf-admin-robot.iam.gserviceaccount.com" --role roles/cloudfunctions.serviceAgent
+
+
+To connect to artifactory from Wharf:
+We can use the proxy used in /etc/pip.conf to connect to artifactory.
+We can also capture this information with the code below:
+python3
+from cap_tools import environment
+env = environment.CapEnvironment()
+env.proxy
+This will show the cluster endpoint that points to securecomms.
+
+
+gcloud iam service-accounts \
+--project=${GCP_PROJECT} \
+add-iam-policy-binding ansible-inventory@${GCP_PROJECT}.iam.gserviceaccount.com \
+--member='user:shivam.agrawal@domain.com' \
+--role='roles/iam.serviceAccountTokenCreator'
+gcloud iam service-accounts \
+--project=${GCP_PROJECT} \
+add-iam-policy-binding ansible-inventory@${GCP_PROJECT}.iam.gserviceaccount.com \
+--member="serviceAccount:ansible-inventory@${GCP_PROJECT}.iam.gserviceaccount.com" \
+--role='roles/iam.serviceAccountTokenCreator'
+gcloud iam service-accounts \
+--project=${GCP_PROJECT} \
+add-iam-policy-binding ansible-inventory@${GCP_PROJECT}.iam.gserviceaccount.com \
+--member='user:shivam.agrawal@domain.com' \
+--role='roles/iam.serviceAccountUser'
+
+
+GCP Repos:--------------------------------------------------------------------------------
+
+Monitoring:-
+============
+https://dhgitlab.domain.co.uk/Cloud/dh-monitoring/dh-google-sd-log-metrics
+https://dhgitlab.domain.co.uk/Cloud/dh-monitoring/dh-google-cloud-monitoring
+
+Get Spark job logs from Wharf -> Get Spark Job Logs - Core Tech | Cloud Documentation (domain.co.uk)
+Use Gitlab from Wharf -> How to use git under Wharf - Core Tech | Cloud Documentation (domain.co.uk)
+Transient cluster -> https://cloud.pages.domain.co.uk/external/user-guides/docs/all/How-to-run-jobs-using-transient-cluster/
+
+Kubelet commands for cloud:------------------------------------------------------------------------
+
+1. gcloud container clusters get-credentials crv-dsp-base-cluster --zone europe-west1-d --project dh-crv-34340
+2. kubectl get ns - To get the namespace
+3. kubectl get pods -n crv-dsp-dp-airflow(namespace) - To get the pods of a particular namespace
+4. kubectl exec -it dsp-dp-airflow-scheduler-7cb7c6bf88-tvqrg -n crv-dsp-dp-airflow bash - To go inside the pod.
+5. kubectl exec -it dsp-dp-airflow-scheduler-7cb7c6bf88-tvqrg -n crv-dsp-dp-airflow bash -c airflow-scheduler-logs - To go inside a more particular pod.
+
+******************************************************************************
+Work done on GCP:----------------------------------------------------------------------------------
+
+1. gsutil ls gs://raleys-analystplatform-dataproc-config/warehouse/hive-warehouse/raleys_comms.db
+2. gsutil ls gs://raleys-analystplatform-analyst/raleys_comms
+3. gsutil -m rsync -d -r gs://raleys-analystplatform-dataproc-config/warehouse/hive-warehouse/raleys_comms.db gs://raleys-analystplatform-analyst/raleys_comms
+4. hive -e "show tables in raleys_comms_old;" > raleys_comms_old_tables.txt
+5. hive -e "show tables in raleys_comms;" > raleys_comms_tables.txt
+6. comm -2 -3 <(sort raleys_comms_old_tables.txt) <(sort raleys_comms_tables.txt) > diff.txt
+
+Useful commands:--------------------------------------------------------------------------------------
+
+1. for object in $(gsutil ls gs://netshoes-ingest-ingest/ | cut -d'/' -f4); do gsutil ls gs://netshoes-ingest-archive/$object; done
+2. gcloud projects list | awk '{print $1}' | grep -Ev 'dev|data|cds|cmp|sys|test' | wc -l
+3. gcloud projects list | awk '{print $1}' | grep -E '[0-9]{5}' | grep -Ev 'dev|data|cds|cmp|sys|test|castle|preprod|store|pnp'
+4. gcloud projects list | awk '{print $1}' | grep -E '[0-9]{5}' | grep -Ev 'dev|data|cds|cmp|sys|test|castle|preprod|store|pnp|media|gam|dhsmart|security|measurement|portal|billing|beyond|tesco'
+5.  gcloud compute ssl-certificates describe dh-cds-fperuanas-pe-85079-ssl-certificate-20220222044153 --project=dh-cds-fperuanas-pe-85079
+6. gcloud auth activate-service-account --key-file=gcp-svc-account-key.crv.json
+7. gcloud config set account `ACCOUNT`
+8. gcloud info
+9. gsutil config -a -> To create a .boto file
+10. gsutil -m ls -ld gs://crai-it-ingest-archive/ | awk '{print $2,$3}' > list1.txt
+11. cat list1.txt | cut -c1-10 | sort -u | grep 2020
+12. cat list1.txt | grep '^2020-06\|^2020-07' | grep -v '^2020-07-31\|^2020-07-30\|^2020-07-29\|^2020-07-28\|^2020-07-27\|^2020-07-26\|^2020-07-25\|^2020-07-24\|^2020-07-23\|^2020-07-22\|^2020-07-21' | sort > crai-it-ps-ingest-archive.txt
+13. gsutil ls -r -p dh-pcc-us-dev-data-84583 gs://pcc-us-dev-dataplatform-* > pcc-us-dev-data.txt
+
+
+******************************************************************************
+All the eu.gcr.io, us.gcr.io, gcr.io images resides under dh-container-images project under images in GCP. We have a Cloud run utility in dh-container-images project which contains image mover which is responsible for moving the images to all the clients and projects in GCP.
+******************************************************************************
+
+************************************************************************************************************************************************************************************
+1. generate csr using below script
+[tejaswt@gb-slo-svv-1471 ~]$ cd ~/_certs/
+[tejaswt@gb-slo-svv-1471 _certs]$ ./generate-san-cert-csr.sh <stack-name>.domain.cloud "\*"
+
+
+
+this will generate csr and key.
+
+
+
+
+2. generate certificate on digi cert portal using csr generated in previous step.
+generate ssl-cert using below gcloud commnads,
+3. gcloud compute ssl-certificates list --project=dh-seg-us-media-43623
+4. gcloud compute target-https-proxies list --project=dh-seg-us-media-43623
+5. gcloud compute ssl-certificates create dh-ce-dev-media-59188-ssl-certificate-20201217154500 --certificate ce-dev-media.domain.cloud.cer --private-key ce-dev-media.domain.cloud.key --project=dh-ce-dev-media-59188
+6.gcloud compute target-https-proxies update cdm-static1-webuserproxy-https-proxy --ssl-certificate dh-ce-dev-media-59188-ssl-certificate-20201217154500 --project=dh-ce-dev-media-59188
+
+
+
+
+7. Update same cert in webuserproxy-config bucket and restart authproxy service on the vm.(compare certs on the vm and webuserproxy-config buckeet are same or not)
+8. update same cert, csr and key in dh-cs-core project, gcp-project-cert bucket.
+
+
+[shivamg@gb-slo-svv-1471 vsi.domain.cloud]$ gcloud compute target-https-proxies list --project=dh-vsi-84252
+NAME                          SSL_CERTIFICATES                             URL_MAP
+vsi-webuserproxy-https-proxy  dh-vsi-84252-ssl-certificate-20200408052031  vsi-webuserproxy-https-lb
+
+
+gcloud compute ssl-certificates create dh-ce-dev-media-59188-ssl-certificate-20201217154500 --certificate ce-dev-media.domain.cloud.cer --private-key ce-dev-media.domain.cloud.key --project=dh-ce-dev-media-59188
+
+gcloud compute ssl-certificates create dh-vsi-84252-ssl-certificate-20220516092349 --certificate vsi.domain.cloud.cer --private-key vsi.domain.cloud.key --project=dh-vsi-84252
+
+gcloud compute target-https-proxies update vsi-webuserproxy-https-proxy --ssl-certificate dh-vsi-84252-ssl-certificate-20220516092349 --project=dh-vsi-84252
+
+
+gcloud compute ssl-certificates create dh-shoprite-61482-ssl-certificate-20220516092349 --certificate vsi.domain.cloud.cer --private-key vsi.domain.cloud.key --project=dh-vsi-84252
+
+gcloud compute target-https-proxies update vsi-webuserproxy-https-proxy --ssl-certificate dh-vsi-84252-ssl-certificate-20220516092349 --project=dh-vsi-84252
+
